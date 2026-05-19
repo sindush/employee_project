@@ -1,0 +1,27 @@
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.5rem 1rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.error {
+  color: #b00020;
+}
+
+.danger {
+  background: #b00020;
+  color: #fff;
+  border: none;
+}

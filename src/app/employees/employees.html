@@ -1,0 +1,51 @@
+<section class="page">
+  <h1>
+    @if (isViewMode) {
+      View employee
+    } @else if (isEditMode) {
+      Edit employee
+    } @else {
+      Add employee
+    }
+  </h1>
+
+  @if (loading && isEditMode) {
+    <p>Loading employee...</p>
+  }
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>
+      Name
+      <input type="text" formControlName="name" />
+    </label>
+    <label>
+      Phone
+      <input type="text" formControlName="phone" />
+    </label>
+    <label>
+      Address
+      <input type="text" formControlName="address" />
+    </label>
+    <label>
+      Department
+      <input type="text" formControlName="department" />
+    </label>
+    <label>
+      Role
+      <input type="text" formControlName="role" />
+    </label>
+
+    <div class="actions">
+      @if (!isViewMode) {
+        <button type="submit" [disabled]="form.invalid || loading">
+          {{ isEditMode ? 'Update' : 'Save' }}
+        </button>
+      }
+      <a routerLink="/">Back to list</a>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </form>
+</section>

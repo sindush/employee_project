@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Alice Johnson",
+      "phone": "555-0101",
+      "address": "123 Main St",
+      "department": "Engineering",
+      "role": "Developer"
+    },
+    {
+      "id": 2,
+      "name": "Bob Smith",
+      "phone": "555-0102",
+      "address": "456 Oak Ave",
+      "department": "HR",
+      "role": "Manager"
+    },
+    {
+      "name": "sindush",
+      "phone": "8885555974",
+      "address": "sample",
+      "department": "BFS",
+      "role": "developer",
+      "id": 3
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<section class="page">
+  @if (loading) {
+    <p>Loading...</p>
+  }
+  @if (error) {
+    <p class="error">{{ error }}</p>
+  }
+
+  @if (employee; as emp) {
+    <h1>{{ emp.name }}</h1>
+    <dl>
+      <dt>Phone</dt>
+      <dd>{{ emp.phone }}</dd>
+      <dt>Address</dt>
+      <dd>{{ emp.address }}</dd>
+      <dt>Department</dt>
+      <dd>{{ emp.department }}</dd>
+      <dt>Role</dt>
+      <dd>{{ emp.role }}</dd>
+    </dl>
+    <div class="actions">
+      <button type="button" (click)="onEdit()">Edit</button>
+      <button type="button" class="danger" (click)="onDelete()">Delete</button>
+      <a routerLink="/">Back to list</a>
+    </div>
+  }
+</section>
